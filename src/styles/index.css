@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-left: 220px;
+}
+
+.new-deck-form {
+  margin-bottom: 3px;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  padding: 5px;
+  min-width: 200px;
+  height: 100vh;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.sidebar .deck {
+  height: 20px;
+}
+
+.deck {
+  cursor: pointer;
+}
+
+.main {
+  flex: 1;
+}
+
+.tab {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.buttons {
+  height: 30px;
+  flex-direction: row;
+  display: flex;
+  margin-bottom: 10px;
+  gap: 3px;
+}
+.buttons button {
+  height: 100%;
+  padding: 0px 4px;
+  gap: 3px;
+}
+
+.question {
+  display: flex;
+  flex-direction: row;
+  height: 25px;
+  width: 80%;
+  padding: 3px 3px;
+}
+.question div {
+  height: 100%;
+}
+.question:hover {
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+}
+.question:hover .controls {
+  display: flex;
+}
+.question .body {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.question p {
+  display: inline;
+}
+.question .question-number {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: grey;
+  text-align: center;
+  width: 16px;
+  height: 16px;
+}
+.question .controls {
+  flex: 0.3;
+  display: none;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.controls button {
+  height: 100%;
+  flex: 1;
+}
+
+.input-question {
+  width: 80%;
+  height: 30px;
+}
+.input-question input {
+  width: 80%;
+  outline: none;
+  margin-left: 6px;
+}
+
+.edit-input {
+  outline: none;
+  width: 90%;
+}
+
+.front-page {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 500px;
+}
+
+.study {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85% !important;
+  overflow-y: hidden;
+}
+
+.page {
+  margin-top: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  width: 500px;
+  height: 810px;
+}
+
+.content-page {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.front-page-div {
+  position: relative;
+}
+
+.subject-name {
+  position: absolute;
+  top: 270px;
+  background-color: white;
+  font-size: 24px;
+  left: 48px;
+}
+
+.page-number {
+  font-size: 13px;
+  color: grey;
+  text-align: center;
+}/*# sourceMappingURL=index.css.map */
