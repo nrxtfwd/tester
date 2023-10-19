@@ -32,15 +32,17 @@ const NewDeck = ({ deckName, setDeckName}) => {
     }
 
     return (
-        <div className="new-deck-form">
-            <input className="new-deck-input" type="text" ref={newDeckInput} onKeyDown={e => {
-                if (e.key === 'Enter') {
-                    newDeckInput.current.blur()
-                    handleClick()
-                }
-            }} value={deckName} onChange={event => setDeckName(event.target.value)} placeholder="Enter the name of your deck" />
-            <button className="new-deck-add" onClick={handleClick}>Add</button>
-            {error && <p>{error}</p>}
+        <div className="new-deck-div">
+            <div className="new-deck-form">
+                <input className="new-deck-input" type="text" ref={newDeckInput} onKeyDown={e => {
+                    if (e.key === 'Enter') {
+                        newDeckInput.current.blur()
+                        handleClick()
+                    }
+                }} value={deckName} onChange={event => setDeckName(event.target.value)} placeholder="Enter the name of your deck" />
+                <button className="new-deck-add" onClick={handleClick}>Add</button>
+            </div>
+            {error && <p className="new-deck-error">{error}</p>}
         </div>
     )
 }

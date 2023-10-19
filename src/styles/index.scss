@@ -5,6 +5,11 @@
   font-family: sans-serif;
 }
 
+body {
+  background-image: url('../images/wallpaper.jpg');
+  background-size: cover;
+}
+
 .app {
   display: flex;
   width: 100%;
@@ -17,48 +22,96 @@
 }
 
 .new-deck-form {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255,255,255,0.25);
+  padding: 4px 5px;
+  box-sizing: border-box;
+  margin-bottom: 4px;
+  border-radius: 0.75rem;
+}
+
+.new-deck-div {
   margin-bottom: 10px;
+}
+
+.new-deck-error {
+  padding: 0px 5px;
+  box-sizing: border-box;
+  font-size: 14pxww;
+  color: red;
 }
 
 .new-deck-input {
   padding: 5px;
+  border-radius: 0.75rem;
+  outline: none;
+  border: none;
+  background-color: rgba(255,255,255,0.5);
+  box-sizing: border-box;
+  padding: 0px 5px;
 }
 
 .new-deck-add {
+  flex: 1;
+  color: black;
+  border-radius: 5px;
   padding: 3px;
   margin-left: 5px;
   height: 100%;
   border: none;
+  background: none;
   outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #0063e2;
+    color: white;
+  }
 }
 
 .sidebar {
   position: fixed;
   left: 0;
-  padding: 20px;
+  padding: 13px;
   box-sizing: border-box;
   width: 20%;
   min-width: 120px;
   height: 100vh;
-  background-color: grey;
+  // backdrop-filter: blur(12px);
+  background-image: linear-gradient(to right, rgba(0,0,0,0.25), rgba(0,0,0,0));
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
 
   .deck {
-    height: 20px;
     padding: 3px 5px;
+    cursor: pointer;
+    background: none;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+      display: inline;
+      position: absolute;
+      left: 40px;
+    }
+
+    span {
+      overflow: hidden;
+    }
     
     &:hover {
-      border-style: solid;
-      border-width: 1px;
-      border-color: black;
+      background: fixed;
+      color: rgba(255,255,255,0.75);
     }
   }
 }
 
-.deck {
-  cursor: pointer;
+.selected-deck {
+  background-color: rgba(0,0,0,0.1) !important;
 }
 
 .main {
